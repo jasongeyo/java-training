@@ -5,7 +5,7 @@ import java.sql.SQLOutput;
 public class Manager extends Employee{
 	private double bonus;
 	public Manager(String name , double salary, double bonus) {
-        super(name, salary);
+        super(name, salary , 20);
         this.bonus = bonus;
 	}
 
@@ -27,5 +27,10 @@ public class Manager extends Employee{
         System.out.println("底薪: " + getSalary());
         System.out.println("獎金" + bonus);
         System.out.println("總金額"+ getTotalSalary());
+    }
+
+    @Override
+    public double calculateAnnualSalary(){
+        return (getSalary() * 12) + getBonus();
     }
 }
