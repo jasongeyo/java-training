@@ -11,6 +11,10 @@ public class PaymentDemo {
         cash.pay(300);
         cash.printReceipt(300);
 
+        //  呼叫介面靜態方法
         Payable.showSupporInfo();
+
+        Person person = new Person();
+        person.printReceipt();
     }
 }
