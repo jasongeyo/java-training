@@ -1,0 +1,16 @@
+package week2;
+
+public class PaymentDemo {
+    public static void main(String[] args) {
+        Payable card = new CreditCardPayment();
+        Payable cash = new CashPayment();
+
+        card.pay(500);
+        card.printReceipt(500);
+
+        cash.pay(300);
+        cash.printReceipt(300);
+
+        Payable.showSupporInfo();
+    }
+}
