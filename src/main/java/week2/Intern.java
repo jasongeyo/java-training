@@ -12,6 +12,6 @@ public class Intern extends Employee implements Payable{
 
     @Override
     public void pay(double amount) {
-
+        System.out.println("Paying Intern " + name + ": $" + amount);
     }
 }
